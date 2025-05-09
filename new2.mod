@@ -88,7 +88,7 @@ s.t. FirstFlightOrigin {a in A, f in F: Reach[a,f]=1 and origin[f] != pos0[a]}:
 s.t. FirstFlightLink {a in A, f in F: Reach[a,f]=1}:
     z[a,f] <= x[f,a]
 ;
-# 8) Each non-rented aircraft must make at least one flight back to the original airport
+# 9) Each non-rented aircraft must make at least one flight back to the original airport
 s.t. ReturnHome {a in A}:
     sum {f in F: dest[f] = pos0[a]} x[f,a] >= 1 - y[a];
 
